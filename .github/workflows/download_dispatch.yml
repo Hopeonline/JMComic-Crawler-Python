@@ -61,6 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # 工作流输入
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       JM_ALBUM_IDS: ${{ github.event.inputs.JM_ALBUM_IDS }}
       JM_PHOTO_IDS: ${{ github.event.inputs.JM_PHOTO_IDS }}
       DIR_RULE: ${{ github.event.inputs.DIR_RULE }}
@@ -123,3 +124,7 @@ jobs:
           path: ${{ env.JM_DOWNLOAD_DIR }}/${{ env.ZIP_NAME }}
           if-no-files-found: error
           retention-days: 90
+
+
+
+     
